@@ -4,6 +4,7 @@ layout: base.njk
 
 <article class="post">
     <h1 class="post__title">{{ title }}</h1>
+    <p class="post__metadata">by {{ author }} on {{ page.date | postDate}}</p>
     <figure class="post__figure">
         <img class="post__image" src="{{ image }}" alt="{{ imageAlt }}">
         <figcaption class="post__caption">

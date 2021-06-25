@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Website With Some Stuff</title>
+  <subtitle>A Website</subtitle>
+  <link href="http://localhost:8080/featured-feed.xml" rel="self"/>
+  <link href="http://localhost:8080"/>
+  <updated>2021-06-27T21:00:00Z</updated>
+  <id>http://localhost:8080</id>
+  <author>
+    <name>Bekir Berke Gülmez</name>
+    <email></email>
+  </author>
+  
+  <entry>
+    <title>Third</title>
+    <link href="http://localhost:8080/posts/2021-06-27-third/"/>
+    <updated>2021-06-26T21:00:00Z</updated>
+    <id>http://localhost:8080/posts/2021-06-27-third/</id>
+    <content type="html"></content>
+  </entry>
+  
+  <entry>
+    <title>Another Post</title>
+    <link href="http://localhost:8080/posts/2021-06-28-another-post/"/>
+    <updated>2021-06-27T21:00:00Z</updated>
+    <id>http://localhost:8080/posts/2021-06-28-another-post/</id>
+    <content type="html"></content>
+  </entry>
+</feed>

@@ -1,0 +1,38 @@
+---
+title: example
+layout: base.njk
+---
+
+<h1 class="home__about-heading">About</h1>
+<div class="home__about">
+    <p class="home__about-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, repellendus magni
+        dolorum
+        natus officiis vel nisi rem aliquid ducimus, suscipit deleniti fugit! Explicabo iusto numquam nemo cum maiores
+        impedit. Debitis, aliquid inventore. Ut rerum aspernatur doloremque minima. Similique at mollitia praesentium
+        nesciunt aliquid odio? Commodi nesciunt molestiae quia, enim dolorem omnis deleniti illo, veniam dignissimos
+        tempora
+        excepturi dolor voluptate placeat aspernatur repellendus facere, optio ipsum possimus laboriosam esse autem ad.
+        Necessitatibus laboriosam magnam beatae tempora vero! Commodi repudiandae cumque sunt incidunt pariatur ipsa
+        officiis quo similique ipsam suscipit quos dicta, labore excepturi dolores nisi minima officia nihil velit
+        veritatis
+        in.
+    </p>
+    <img src="https://picsum.photos/400/300" alt="description" class="home__about-img">
+</div>
+
+<h1 class="home__featured-heading">Featured Posts</h1>
+<div class="home__featured">
+    <ul class="cards">
+        {%- for post in collections.featured | reverse -%}
+        <li>
+            <article class="card">
+                <h3 class="card__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+                <img class="card__image" src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}">
+                <p class="card__metadata">by {{ post.data.author }} on {{ post.date | postDate}}</p>
+                <p class="card__description">{{ post.data.description }}</p>
+                <a class="card__btn" href="{{ post.url }}">Continue reading...</a>
+            </article>
+        </li>
+        {%- endfor %}
+    </ul>
+</div>

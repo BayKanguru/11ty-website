@@ -1,3 +1,3 @@
 # 11ty-website
 
-Soon will get launched
+Kind of a website template

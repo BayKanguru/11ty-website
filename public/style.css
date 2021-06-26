@@ -34,6 +34,7 @@ main {
   margin-right: auto;
   width: 90%;
   display: flex;
+  gap: 1rem;
 }
 
 .home__about-description {
@@ -387,12 +388,6 @@ main {
   margin-left: 0.2rem;
   bottom: -10%;
   transform: scale(0.9);
-}
-
-@media (min-width: 48em) {
-  .footer-links {
-    flex-wrap: wrap;
-  }
 }
 /* ********** */
 /* footer end */

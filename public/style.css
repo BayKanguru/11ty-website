@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800&display=swap");
 @import url("https://necolas.github.io/normalize.css/latest/normalize.css");
 :root {
-  --bg-600: #f2f3f1;
-  --bg-700: #919494;
+  --bg-600: hsl(90, 8%, 95%);
+  --bg-700: hsl(180, 1%, 57%);
 
-  --fg-300: #716e74;
-  --fg-600: #3c3f3f;
-  --fg-900: #111515;
+  --fg-300: hsl(270, 3%, 44%);
+  --fg-600: hsl(180, 2%, 24%);
+  --fg-900: hsl(180, 11%, 7%);
 
-  --hl-600: rgb(252, 184, 128);
-  --hl-700: rgb(252, 149, 65);
+  --hl-600: hsl(27, 95%, 75%);
+  --hl-700: hsl(27, 97%, 62%);
 }
 
 body {
@@ -30,31 +30,39 @@ main {
 }
 
 .home__about {
-  width: 100%;
-  display: grid;
-  grid-template-areas: "desc desc desc image";
-}
-
-.home__about-heading {
-  display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 13%;
-}
-
-.home__featured-heading {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 16%;
+  width: 90%;
+  display: flex;
 }
 
 .home__about-description {
-  grid-area: desc;
+  flex: 10;
 }
 
 .home__about-img {
-  grid-area: image;
+  object-fit: contain;
+  width: auto;
+  height: auto;
+  flex: 1;
+}
+
+.home__about-heading {
+  text-align: center;
+}
+
+.home__featured-heading {
+  text-align: center;
+}
+
+@media screen and (max-width: 48em) {
+  .home__about {
+    flex-wrap: wrap;
+  }
+  main {
+    margin: 1rem 1rem;
+    margin-bottom: 0;
+  }
 }
 
 /* ******** */
@@ -70,6 +78,7 @@ main {
 }
 
 .card {
+  border-radius: 0.3rem;
   padding: 0.5rem;
   margin: 1rem;
   margin-left: 0;
@@ -131,6 +140,17 @@ main {
   background-color: var(--hl-600);
   color: white;
   border: 0.3rem solid var(--hl-600);
+}
+
+@media screen and (max-width: 48em) {
+  .card {
+    grid-template-areas:
+      "title"
+      "metadata"
+      "image"
+      "description"
+      "button";
+  }
 }
 
 /* ************* */
@@ -350,6 +370,9 @@ main {
 
 .footer-links {
   grid-area: links;
+  display: flex;
+  justify-content: right;
+  margin-right: 1rem;
 }
 
 .footer-links a {
@@ -366,6 +389,11 @@ main {
   transform: scale(0.9);
 }
 
+@media (min-width: 48em) {
+  .footer-links {
+    flex-wrap: wrap;
+  }
+}
 /* ********** */
 /* footer end */
 /* ********** */
